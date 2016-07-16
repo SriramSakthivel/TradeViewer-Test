@@ -10,6 +10,8 @@
     </Window.Resources>
     <Grid>
         <DockPanel LastChildFill="True" Margin="5">
+            <Button Content="Add New Trade" DockPanel.Dock="Bottom" Margin="10,0,10,0"
+                    Command="{Binding AddTradeCommand}"/>
             <DataGrid ItemsSource="{Binding Trades}" AutoGenerateColumns="False" CanUserAddRows="False"
                       SelectionUnit="FullRow">
                 <DataGrid.Columns>
