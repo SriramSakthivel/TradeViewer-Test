@@ -5,6 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TradeViewer.Core.Data;
+using TradeViewer.ViewModels;
+using TradeViewer.Views;
 
 namespace TradeViewer
 {
@@ -13,5 +16,13 @@ namespace TradeViewer
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            var viewModel = new MainViewModel(new PriceSource(new RandomPriceGenerator()));
+            MainWindow= new MainWindow(viewModel);
+            MainWindow.Show();
+
+            base.OnStartup(e);
+        }
     }
 }

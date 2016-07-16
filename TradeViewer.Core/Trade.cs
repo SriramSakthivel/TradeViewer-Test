@@ -1,5 +1,8 @@
-﻿namespace TradeViewer.Core
+﻿using PropertyChanged;
+
+namespace TradeViewer.Core
 {
+    [ImplementPropertyChanged]
     public class Trade : IPriceSubscriber
     {
         public string Security { get; set; }
