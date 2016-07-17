@@ -11,10 +11,13 @@ namespace TradeViewer.ViewModels
     {
         private readonly IPriceSource priceSource;
         private readonly ITradeModifyService tradeModifyService;
-        public MainViewModel(IPriceSource priceSource, ITradeModifyService tradeModifyService)
+        private readonly ITradeRepository tradeRepository;
+
+        public MainViewModel(IPriceSource priceSource, ITradeModifyService tradeModifyService, ITradeRepository tradeRepository)
         {
             this.priceSource = priceSource;
             this.tradeModifyService = tradeModifyService;
+            this.tradeRepository = tradeRepository;
 
             AddTradeCommand = new RelayCommand<object>(AddNewTrade);
             Trades = new ObservableCollection<Trade>();
@@ -26,7 +29,7 @@ namespace TradeViewer.ViewModels
 
         public void Initialize()
         {
-            var trades = TradeRepository.GetStaticTrades();
+            var trades = tradeRepository.GetAllTrades();
             foreach (var trade in trades)
             {
                 Trades.Add(trade);

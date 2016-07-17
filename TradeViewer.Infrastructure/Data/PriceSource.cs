@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TradeViewer.Core;
+using TradeViewer.Core.Data;
 
-namespace TradeViewer.Core.Data
+namespace TradeViewer.Infrastructure.Data
 {
     public class PriceSource : IPriceSource
     {

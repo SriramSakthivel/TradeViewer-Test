@@ -50,13 +50,7 @@
     <Compile Include="Data\IPriceSource.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\PriceSource.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Data\RandomPriceGenerator.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Data\TradeRepository.cs" />
+    <Compile Include="Data\ITradeRepository.cs" />
     <Compile Include="IPriceSubscriber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trade.cs" />

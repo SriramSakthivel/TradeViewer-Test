@@ -39,7 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\PriceSource.cs" />
+    <Compile Include="Data\RandomPriceGenerator.cs" />
+    <Compile Include="Data\TradeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TradeViewer.Core\TradeViewer.Core.csproj">
+      <Project>{4D80D8C7-7305-4C65-82D6-145A23D672BE}</Project>
+      <Name>TradeViewer.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

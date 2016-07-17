@@ -1,6 +1,7 @@
 ﻿using System;
+using TradeViewer.Core.Data;
 
-namespace TradeViewer.Core.Data
+namespace TradeViewer.Infrastructure.Data
 {
     public class RandomPriceGenerator : IPriceGenerator
     {

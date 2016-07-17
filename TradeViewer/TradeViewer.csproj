@@ -126,6 +126,10 @@
       <Project>{4D80D8C7-7305-4C65-82D6-145A23D672BE}</Project>
       <Name>TradeViewer.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TradeViewer.Infrastructure\TradeViewer.Infrastructure.csproj">
+      <Project>{4B4FFA37-57B2-46F2-AC8A-A43FFCA1524A}</Project>
+      <Name>TradeViewer.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FodyWeavers.xml" />

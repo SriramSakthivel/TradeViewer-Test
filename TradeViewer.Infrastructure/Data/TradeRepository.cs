@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using TradeViewer.Core;
+using TradeViewer.Core.Data;
 
-namespace TradeViewer.Core.Data
+namespace TradeViewer.Infrastructure.Data
 {
-    public static class TradeRepository
+    public class TradeRepository : ITradeRepository
     {
-        public static IEnumerable<Trade> GetStaticTrades()
+        public IEnumerable<Trade> GetAllTrades()
         {
             yield return new Trade()
             {
@@ -15,6 +17,7 @@ namespace TradeViewer.Core.Data
             {
                 Security = "JPY",
                 Quantity = 20
+
             };
             yield return new Trade()
             {

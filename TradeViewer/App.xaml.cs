@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
-using TradeViewer.Core.Data;
+using TradeViewer.Infrastructure.Data;
 using TradeViewer.Services;
 using TradeViewer.ViewModels;
 using TradeViewer.Views;
@@ -21,7 +16,9 @@ namespace TradeViewer
         {
             var viewModel = new MainViewModel(
                 new PriceSource(new RandomPriceGenerator()),
-                new TradeModifyService());
+                new TradeModifyService(),
+                new TradeRepository());
+
             MainWindow= new MainWindow(viewModel);
             MainWindow.Show();
 
