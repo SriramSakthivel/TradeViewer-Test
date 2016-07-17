@@ -17,7 +17,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Security" Binding="{Binding Security}" Width="*"/>
                     <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="*"/>
-                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*">
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
                                 <Setter Property="Foreground" Value="{Binding PriceTrend, Converter={StaticResource TrendConverter}}" />
